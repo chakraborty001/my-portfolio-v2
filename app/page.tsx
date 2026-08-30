@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <main className="min-h-screen max-w-4xl mx-auto px-6 py-12 flex flex-col gap-12">
-      {/* Header / Hero Section */}
+    <main className="min-h-screen max-w-4xl mx-auto px-6 py-12 flex flex-col gap-10 font-sans">
+      
+      {/* Hero / Header Section */}
       <section className="flex flex-col md:flex-row items-center gap-8 bg-slate-900/60 p-8 rounded-2xl border border-slate-800 shadow-xl backdrop-blur-sm">
         <img 
           src="/avatar.jpg" 
@@ -10,40 +11,104 @@ export default function Home() {
         />
         <div className="flex flex-col gap-3 text-center md:text-left">
           <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-800/50 px-3 py-1 rounded-full w-fit mx-auto md:mx-0">
-            ✨ AI & Software Engineering
+            🎓 Computer Science & Engineering Graduate
           </span>
           <h1 className="text-4xl font-extrabold tracking-tight text-white">Anik Chakraborty</h1>
           <p className="text-slate-400 text-sm leading-relaxed max-w-xl">
-            Building intelligent multimodal systems, fine-tuning LLMs, and crafting scalable software solutions.
+            Dedicated CSE Graduate with a strong foundation in Large Language Models, Prompt Engineering, and technical documentation. Quick learner passionate about AI exploration and problem-solving.
           </p>
-          <div className="flex gap-4 justify-center md:justify-start pt-2 text-xl text-slate-400">
-            <a href="https://github.com" target="_blank" className="hover:text-cyan-400 transition-colors"><i className="fab border-cyan border-slate-700 hover:border-cyan-500 p-2 rounded-lg bg-slate-800/50 fa-github"></i></a>
-            <a href="https://linkedin.com" target="_blank" className="hover:text-cyan-400 transition-colors"><i className="fab border-cyan border-slate-700 hover:border-cyan-500 p-2 rounded-lg bg-slate-800/50 fa-linkedin"></i></a>
-            <a href="mailto:contact@example.com" className="hover:text-cyan-400 transition-colors"><i className="fas border-cyan border-slate-700 hover:border-cyan-500 p-2 rounded-lg bg-slate-800/50 fa-envelope"></i></a>
+          
+          {/* Contact Details */}
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-2 text-xs text-slate-300">
+            <a href="mailto:anikchakraborty998@gmail.com" className="flex items-center gap-1.5 bg-slate-800/80 hover:bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg transition">
+              <i className="fas fa-envelope text-cyan-400"></i> anikchakraborty998@gmail.com
+            </a>
+            <a href="tel:01533337365" className="flex items-center gap-1.5 bg-slate-800/80 hover:bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg transition">
+              <i className="fas fa-phone text-cyan-400"></i> 01533337365
+            </a>
+            <span className="flex items-center gap-1.5 bg-slate-800/80 border border-slate-700 px-3 py-1.5 rounded-lg text-slate-400">
+              <i className="fas fa-location-dot text-cyan-400"></i> Chattogram, Bangladesh
+            </span>
           </div>
         </div>
       </section>
 
-      {/* Core Expertise Section */}
-      <section className="flex flex-col gap-6">
+      {/* Featured Thesis Research */}
+      <section className="flex flex-col gap-4">
         <h2 className="text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
-          <span className="text-cyan-400">🧠</span> Core Expertise
+          <span className="text-cyan-400">🔬</span> Thesis & Academic Research
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-slate-900/40 p-5 rounded-xl border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col gap-2">
-            <h3 className="font-semibold text-cyan-300">LLM & VLM Engineering</h3>
-            <p className="text-slate-400 text-xs leading-relaxed">Fine-tuning with LoRA, Multimodal IDP Frameworks, and Prompt Systems.</p>
+        <div className="bg-slate-900/40 p-6 rounded-xl border border-slate-800 flex flex-col gap-3">
+          <div className="flex justify-between items-start flex-wrap gap-2">
+            <h3 className="font-bold text-slate-100 text-lg">
+              A-RICD: Adapter-based Resource-efficient Induce-then-Contrast Decoding
+            </h3>
+            <span className="text-xs font-semibold text-cyan-400 bg-cyan-950 px-2.5 py-1 rounded border border-cyan-800/40">
+              LLM Hallucination Reduction
+            </span>
+          </div>
+          <p className="text-slate-400 text-xs leading-relaxed">
+            Researched decoding strategies for Large Language Models to reduce hallucinations. Worked as part of an academic team participating in data compilation, performance evaluation, and experiment reporting.
+          </p>
+        </div>
+      </section>
+
+      {/* Skills Summary */}
+      <section className="flex flex-col gap-4">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
+          <span className="text-cyan-400">⚡</span> Skills Summary
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-slate-900/40 p-5 rounded-xl border border-slate-800/80 flex flex-col gap-2">
+            <h3 className="font-semibold text-cyan-300 text-sm">Digital & AI Tools</h3>
+            <div className="flex flex-wrap gap-2 pt-1 text-xs">
+              {['Prompt Generation & Utilization', 'Web Research', 'AI Tool Exploration', 'Computer Fundamentals'].map((skill) => (
+                <span key={skill} className="bg-slate-800/60 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700/50">
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
 
-          <div className="bg-slate-900/40 p-5 rounded-xl border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col gap-2">
-            <h3 className="font-semibold text-cyan-300">RAG & Agentic Systems</h3>
-            <p className="text-slate-400 text-xs leading-relaxed">Building intelligent agents, vector search pipelines, and DiagAgent architectures.</p>
+          <div className="bg-slate-900/40 p-5 rounded-xl border border-slate-800/80 flex flex-col gap-2">
+            <h3 className="font-semibold text-cyan-300 text-sm">Documentation & Office</h3>
+            <div className="flex flex-wrap gap-2 pt-1 text-xs">
+              {['MS Excel (Pivot, VLOOKUP, IF)', 'MS PowerPoint (Design)', 'Technical Documentation', 'Project Reports'].map((skill) => (
+                <span key={skill} className="bg-slate-800/60 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700/50">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Academic Qualifications */}
+      <section className="flex flex-col gap-4">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-100 flex items-center gap-2">
+          <span className="text-cyan-400">🎓</span> Education
+        </h2>
+        <div className="flex flex-col gap-3">
+          <div className="bg-slate-900/40 p-5 rounded-xl border border-slate-800 flex justify-between items-center flex-wrap gap-2">
+            <div>
+              <h3 className="font-bold text-slate-200">B.Sc in Computer Science & Engineering</h3>
+              <p className="text-xs text-slate-400">Port City International University, Chattogram</p>
+            </div>
+            <div className="text-right">
+              <span className="text-xs font-semibold text-cyan-400 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">CGPA: 3.15</span>
+              <p className="text-xs text-slate-500 mt-1">Passing Year: 2026</p>
+            </div>
           </div>
 
-          <div className="bg-slate-900/40 p-5 rounded-xl border border-slate-800/80 hover:border-slate-700 transition-all flex flex-col gap-2">
-            <h3 className="font-semibold text-cyan-300">Full-Stack Development</h3>
-            <p className="text-slate-400 text-xs leading-relaxed">Modern web applications built with Next.js, React, and Python backend ecosystems.</p>
+          <div className="bg-slate-900/40 p-5 rounded-xl border border-slate-800 flex justify-between items-center flex-wrap gap-2">
+            <div>
+              <h3 className="font-bold text-slate-200">Higher Secondary Certificate (HSC)</h3>
+              <p className="text-xs text-slate-400">Kazem Ali School and College | Board: Chattogram</p>
+            </div>
+            <div className="text-right">
+              <span className="text-xs font-semibold text-slate-300 bg-slate-800 px-3 py-1 rounded-full border border-slate-700">GPA: 3.33</span>
+              <p className="text-xs text-slate-500 mt-1">Passing Year: 2019</p>
+            </div>
           </div>
         </div>
       </section>
